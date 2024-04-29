@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
+import './App.css';
 import TransactionTable from './components/TransactionTable';
 import TransactionForm from './components/TransactionForm';
-import './App.css';
-
+import TransactionFilter from './components/TransactionFilter';
 const App = () => {
   const [transactions, setTransactions] = useState([]);
 
@@ -19,6 +19,7 @@ const App = () => {
       
       <div className="transaction-table">
         <TransactionTable transactions={transactions} />
+        <TransactionFilter/>
       </div>
     </div>
   );
